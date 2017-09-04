@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!-- smithtimeline.html -->
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- title is updated programmatically -->
+  <title>The Default Tab Title</title>
+  <link rel="stylesheet" type="text/css" href="css/timeline.css">
+</head>
+<body>
+  <header id="header">
+    <span id="tlTitlePrefix"></span> &nbsp;
+    <span id="tlTitle">Default Timeline Title</span>
+    <!-- header controls can be added here -->
+  </header>
+
+  <div id="timeline">
+    <!-- svg and infoPanel are created here -->
+  </div>
+
+  <footer id="footer">
+  </footer>
+  <script src="js/d3v4.10.min.js"></script>
+  <script src="js/renderTimeline.js"></script>
+  <script src="tl/test.tl.js"></script>
+  <script>
+    renderTimeline(tl);
+  </script>
+</body>
+</html>

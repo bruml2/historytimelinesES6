@@ -1,0 +1,31 @@
+This is timelineV2docs.txt
+
+A timeline is visibly a rectangle with an x-axis denoting time-in-years and containing a series of rectangles indicating the presence of something from one date to another.
+
+As a data structure, a timeline is a Javascript object with the properties necessary to inform the rendering function (currently: renderTimeline.js) how to draw the timeline within the rectangle. 
+
+The default values for the required information are held within an option object in the render function. These values may be overridden by equivalent option properties on the timeline object passed to the render function, or by a second parameter to the render function.
+
+Required values and their defaults are:
+
+  "tabTitle": "A timeline",
+  "tlTitlePrefixHTML": "",
+  "tlTitleHTML": "The Default Timeline Title",
+  "footerHTML": "",
+  "svgWidth": 1200,
+  "svgSideMargin": 25,
+  "topMarginHeight": 45,
+  "tlHeight": 300,
+  "timeAxisHeight": 40,
+  "svgHeight": null,
+  "topYLimit": 0.9,
+    datesNextToRanges: false
+    addEraLabels: true,
+    axisTicks: false,
+    topTimeAxis: false,
+
+Embedding in HTML.
+
+By default, renderTimeline() expects to place the timeline rectangle in a block element with the id of "timeline"; this can be overridden with a second parameter specifying the target block element.
+
+If the HTML contains a block element with id "header", then the tlTitlePrefix and tlTitle will be written into it; they can contain HTML tags. Likewise, if there is a block element with the id "footer", the footerHTML will be written into it.
